@@ -3,6 +3,7 @@
 
 all : prepare
 	ndk-build
+	echo "Build successful, you can find the binaries in libs/"
 
 prepare : android-ndk android-openssh
 
