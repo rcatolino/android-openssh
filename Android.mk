@@ -4,7 +4,7 @@ include $(CLEAR_VARS)
 
 LOCAL_MODULE := ssl
 LOCAL_SRC_FILES := ../lib/libssl.so
-LOCAL_C_INCLUDES := $(LOCAL_PATH)/../include/
+LOCAL_EXPORT_C_INCLUDES := $(LOCAL_PATH)/../include/
 
 include $(PREBUILT_SHARED_LIBRARY)
 
@@ -13,7 +13,7 @@ include $(CLEAR_VARS)
 
 LOCAL_MODULE := crypto
 LOCAL_SRC_FILES := ../lib/libcrypto.so
-LOCAL_C_INCLUDES := $(LOCAL_PATH)/../include/
+LOCAL_EXPORT_C_INCLUDES := $(LOCAL_PATH)/../include/
 
 include $(PREBUILT_SHARED_LIBRARY)
 
