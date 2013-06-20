@@ -7,6 +7,8 @@ all : prepare
 prepare : android-ndk android-openssh
 
 android-openssh : jni
+
+jni :
 	git clone "git://github.com/CyanogenMod/android_external_openssh.git" jni
 	cp -f Android.mk jni/
 
