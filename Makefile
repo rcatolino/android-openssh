@@ -6,13 +6,11 @@ all : prepare
 
 prepare : android-ndk android-openssh
 
-android-openssh : Android.mk
+android-openssh : jni
 
-Android.mk : jni
+jni : Android.mk
+	-git clone "git://github.com/CyanogenMod/android_external_openssh.git" jni
 	cp -f Android.mk jni/
-
-jni :
-	git clone "git://github.com/CyanogenMod/android_external_openssh.git" jni
 
 android-ndk :
 	@if which ndk-build 2> /dev/null;\
